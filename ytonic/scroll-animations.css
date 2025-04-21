@@ -1,0 +1,64 @@
+/* Scroll Animation Styles */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add staggered delays for groups of elements */
+.fade-in-element:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.fade-in-element:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.fade-in-element:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.fade-in-element:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+/* Fade in from left */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade in from right */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale in animation */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}

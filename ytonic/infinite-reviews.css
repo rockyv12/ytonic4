@@ -1,0 +1,97 @@
+.infinite-reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.testimonial-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-info h4 {
+    margin: 0;
+    font-size: var(--font-size-md);
+}
+
+.testimonial-info p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* Purchase notification styles */
+.purchase-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--bg-elevated);
+    border-left: 4px solid var(--accent-primary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    z-index: 1000;
+    max-width: 300px;
+    transform: translateX(-120%);
+    transition: transform 0.5s ease;
+}
+
+.purchase-notification.show {
+    transform: translateX(0);
+}
+
+.notification-icon {
+    background-color: var(--accent-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-content h4 {
+    margin: 0 0 5px 0;
+    font-size: var(--font-size-sm);
+}
+
+.notification-content p {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}

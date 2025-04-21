@@ -1,0 +1,56 @@
+/* Spacing fixes for site-wide consistency */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl); /* Increased padding for better spacing */
+}
+
+/* Section spacing consistency */
+section {
+  padding: var(--spacing-xxl) 0;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Card spacing consistency */
+.pricing-card, .testimonial-card, .benefit-card, .faq-item {
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Grid spacing consistency */
+.pricing-grid, .testimonials-grid, .benefits-grid {
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+/* Text spacing consistency */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-lg);
+}
+
+p {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Button spacing consistency */
+.button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  margin: var(--spacing-md) 0;
+}
+
+/* Navigation spacing consistency */
+.nav-links li {
+  margin-left: var(--spacing-xl);
+}
+
+/* Footer spacing consistency */
+.footer-grid {
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+/* View all links spacing */
+.view-all-testimonials, .view-all-pricing, .view-all-faq {
+  margin-top: var(--spacing-xl);
+}
