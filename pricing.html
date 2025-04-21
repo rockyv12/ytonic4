@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - YTonic Pre-Monetized YouTube Channels</title>
+    <meta name="description" content="Choose from our Basic ($389) and Premium ($449) pre-monetized YouTube channel packages with instant AdSense change option. Start earning immediately with verified channels.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="spacing-fix.css">
+    <style>
+    /* Main CSS Variables */
+    :root {
+      /* Colors */
+      --bg-primary: #121212;
+      --bg-secondary: #1E1E1E;
+      --bg-elevated: #252525;
+      --accent-primary: #8A2BE2;
+      --accent-secondary: #00CED1;
+      --accent-success: #4CAF50;
+      --accent-warning: #FFC107;
+      --accent-danger: #FF5252;
+      --text-primary: #FFFFFF;
+      --text-secondary: #E0E0E0;
+      --text-muted: #AAAAAA;
+      
+      /* Spacing */
+      --spacing-xs: 0.25rem;
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 1.5rem;
+      --spacing-xl: 2rem;
+      --spacing-xxl: 3rem;
+      
+      /* Typography */
+      --font-size-xs: 0.75rem;
+      --font-size-sm: 0.875rem;
+      --font-size-md: 1rem;
+      --font-size-lg: 1.25rem;
+      --font-size-xl: 1.5rem;
+      --font-size-xxl: 2rem;
+      --font-size-xxxl: 3rem;
+      
+      /* Borders & Radius */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 20px;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.14);
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition-normal: 0.25s ease;
+      --transition-slow: 0.4s ease;
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: var(--font-size-md);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color var(--transition-normal);
+    }
+
+    a:hover {
+      color: var(--accent-primary);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: var(--spacing-md);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: var(--font-size-xxxl);
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: var(--font-size-xxl);
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: var(--font-size-xl);
+    }
+
+    p {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Buttons */
+    .button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-primary), #4B0082);
+      color: white;
+      padding: var(--spacing-md) var(--spacing-xl);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), filter var(--transition-normal);
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .button:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: var(--shadow-md);
+      filter: brightness(1.1);
+      color: white;
+    }
+
+    .button:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    /* Header */
+    .header {
+      padding: var(--spacing-md) 0;
+      position: sticky;
+      top: 0;
+      background-color: rgba(18, 18, 18, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--accent-primary);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin-right: var(--spacing-xl);
+    }
+
+    .nav-links li {
+      margin-left: var(--spacing-lg);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: var(--font-size-xl);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: var(--spacing-xxl) 0;
+      background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiM4QTJCRTIiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+      background-size: cover;
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      padding: var(--spacing-xxl) 0;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
+    }
+
+    .pricing-card {
+      background-color: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--accent-primary);
+      transform: scale(1.05);
+    }
+
+    .pricing-card.featured:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -12px;
+      right: var(--spacing-xl);
+      background: linear-gradient(135deg, var(--accent-primary), #4B0082);
+      color: white;
+      padding: var(--spacing-xs) var(--spacing-md);
+      border-radius: var(--radius-md);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+    }
+
+    .pricing-header {
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .pricing-name {
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .pricing-price {
+      font-size: var(--font-size-xxl);
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-size: var(--font-size-lg);
+      margin-right: var(--spacing-xs);
+    }
+
+    .pricing-description {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+      color: var(--text-secondary);
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .pricing-features li {
+      margin-bottom: var(--spacing-sm);
+      display: flex;
+      align-items: center;
+    }
+
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--accent-success);
+      margin-right: var(--spacing-sm);
+      font-weight: 700;
+    }
+
+    .pricing-features li.not-included {
+      color: var(--text-muted);
+    }
+
+    .pricing-features li.not-included::before {
+      content: '×';
+      color: var(--text-muted);
+    }
+
+    .pricing-button {
+      width: 100%;
+    }
+
+    /* Aged Channels Section */
+    .aged-channels {
+      padding: var(--spacing-xxl) 0;
+      background-color: var(--bg-primary);
+    }
+
+    .aged-channel-card {
+      max-width: 500px;
+      margin: var(--spacing-xl) auto;
+      background-color: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .aged-channel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .aged-channel-header {
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .aged-channel-price {
+      font-size: var(--font-size-xxl);
+      font-weight: 700;
+      color: var(--accent-secondary);
+      margin-top: var(--spacing-xs);
+    }
+
+    .aged-channel-description {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+      color: var(--text-secondary);
+    }
+
+    .aged-channel-features {
+      list-style: none;
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .aged-channel-features li {
+      margin-bottom: var(--spacing-sm);
+      display: flex;
+      align-items: center;
+    }
+
+    .aged-channel-features li::before {
+      content: '✓';
+      color: var(--accent-secondary);
+      margin-right: var(--spacing-sm);
+      font-weight: 700;
+    }
+
+    .limited-stock {
+      text-align: center;
+      color: var(--accent-warning);
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .aged-channel-button {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-secondary), #008B8B);
+    }
+
+    .aged-channel-button:hover {
+      background: linear-gradient(135deg, #00CED1, var(--accent-primary));
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      padding: var(--spacing-xxl) 0;
+      background-color: var(--bg-secondary);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
+    }
+
+    .testimonial-card {
+      background-color: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      transition: transform var(--transition-normal);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-content {
+      margin-bottom: var(--spacing-lg);
+      font-style: italic;
+      position: relative;
+    }
+
+    .testimonial-content::before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      top: -2rem;
+      left: -1rem;
+      color: var(--accent-primary);
+      opacity: 0.2;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: var(--spacing-md);
+      border: 2px solid var(--accent-primary);
+      background-color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .testimonial-info h4 {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .testimonial-info p {
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .testimonial-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      font-size: var(--font-size-sm);
+    }
+
+    .testimonial-stats span {
+      color: var(--accent-primary);
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: var(--spacing-xxl) 0;
+    }
+
+    .faq-list {
+      margin-top: var(--spacing-xl);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-item {
+      margin-bottom: var(--spacing-md);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: var(--spacing-md);
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: var(--font-size-lg);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-md) 0;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: var(--font-size-xl);
+      color: var(--accent-primary);
+    }
+
+    .faq-item.active .faq-question::after {
+      content: '-';
+    }
+
+    .faq-answer {
+      display: none;
+      padding-bottom: var(--spacing-md);
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* CTA Section */
+    .cta {
+      padding: var(--spacing-xxl) 0;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+      border-top: 1px solid rgba(138, 43, 226, 0.2);
+      border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    }
+
+    .cta h2 {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .cta-timer {
+      display: inline-block;
+      margin-bottom: var(--spacing-md);
+      color: var(--accent-warning);
+      font-size: var(--font-size-sm);
+    }
+
+    .cta-button {
+      padding: var(--spacing-md) var(--spacing-xxl);
+      font-size: var(--font-size-lg);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(138, 43, 226, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+      }
+    }
+
+    /* Footer */
+    .footer {
+      padding: var(--spacing-xxl) 0 var(--spacing-lg);
+      background-color: var(--bg-secondary);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-xxl);
+    }
+
+    .footer-about {
+      grid-column: span 2;
+    }
+
+    .footer-logo {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .footer-logo span {
+      color: var(--accent-primary);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--bg-elevated);
+      color: var(--text-primary);
+      transition: all var(--transition-normal);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--accent-primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .footer-links h4 {
+      margin-bottom: var(--spacing-lg);
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-links h4::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent-primary);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .footer-newsletter h4 {
+      margin-bottom: var(--spacing-lg);
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-newsletter h4::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent-primary);
+    }
+
+    .newsletter-form {
+      display: flex;
+      margin-top: var(--spacing-md);
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: var(--spacing-md);
+      border: none;
+      background-color: var(--bg-elevated);
+      color: var(--text-primary);
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+    }
+
+    .newsletter-button {
+      padding: var(--spacing-md);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: var(--font-size-sm);
+      color: var(--text-muted);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: var(--spacing-md);
+    }
+
+    /* Trust Badges */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      color: var(--text-secondary);
+    }
+
+    .trust-badge i {
+      color: var(--accent-primary);
+    }
+
+    /* Table Styles */
+    .table-responsive {
+      overflow-x: auto;
+      margin-top: var(--spacing-xl);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      background-color: var(--bg-elevated);
+      padding: var(--spacing-md);
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .comparison-table th {
+      font-weight: 600;
+    }
+
+    .comparison-table th:nth-child(3) {
+      color: var(--accent-primary);
+    }
+
+    .comparison-table td:nth-child(2),
+    .comparison-table td:nth-child(3) {
+      text-align: center;
+    }
+
+    /* Purchase Notification */
+    .purchase-notification {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: var(--bg-elevated);
+      border-left: 4px solid var(--accent-success);
+      padding: var(--spacing-md);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      z-index: 1000;
+      max-width: 300px;
+      animation: slideIn 0.5s ease, fadeOut 0.5s ease 5s forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      h1 {
+        font-size: var(--font-size-xxl);
+      }
+      
+      h2 {
+        font-size: var(--font-size-xl);
+      }
+      
+      .pricing-card.featured {
+        transform: scale(1.03);
+      }
+      
+      .pricing-card.featured:hover {
+        transform: translateY(-5px) scale(1.03);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links li {
+        margin: var(--spacing-sm) 0;
+      }
+      
+      .mobile-menu-toggle {
+        display: block;
+        margin-right: var(--spacing-md);
+      }
+      
+      .trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+      }
+      
+      .pricing-card.featured {
+        transform: none;
+      }
+      
+      .pricing-card.featured:hover {
+        transform: translateY(-5px);
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-about {
+        grid-column: span 1;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 var(--spacing-sm);
+      }
+      
+      h1 {
+        font-size: var(--font-size-xl);
+      }
+      
+      h2 {
+        font-size: var(--font-size-lg);
+      }
+      
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-legal {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><span>YT</span>onic</a>
+            <nav class="nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="pricing.html" class="button">Claim Your Channel</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pricing Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content text-center" style="max-width: 800px; margin: 0 auto;">
+                <h1>Choose Your Pre-Monetized Channel</h1>
+                <p>Select the package that best fits your content creation goals and budget. Both options provide immediate monetization capabilities.</p>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Transfer</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Verified Channels</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-undo"></i>
+                        <span>Money-Back Guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" style="padding-top: var(--spacing-lg);">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Basic</h3>
+                        <div class="pricing-price"><span class="original-price">$500</span> $389</div>
+                    </div>
+                    <p class="pricing-description">Perfect for creators looking to start monetizing quickly with a solid foundation.</p>
+                    <ul class="pricing-features">
+                        <li>Monetization Enabled</li>
+                        <li>1,000+ Subscribers</li>
+                        <li>4,000+ Watch Hours</li>
+                        <li>Clean Content History</li>
+                        <li>Full Account Access</li>
+                        <li>AdSense Connected</li>
+                        <li>Basic Support (Email)</li>
+                        <li class="not-included">Premium Niche Selection</li>
+                        <li class="not-included">Instant AdSense Change</li>
+                        <li class="not-included">Priority Support</li>
+                        <li class="not-included">Channel Growth Guide</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/bIYbMr2q89J1e1W14c" class="button pricing-button" target="_blank">Monetize Now</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="featured-tag">Recommended</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Premium</h3>
+                        <div class="pricing-price"><span class="original-price">$600</span> $449</div>
+                    </div>
+                    <p class="pricing-description">The complete package with instant AdSense change for maximum success.</p>
+                    <ul class="pricing-features">
+                        <li>Monetization Enabled</li>
+                        <li>1,500+ Subscribers</li>
+                        <li>6,000+ Watch Hours</li>
+                        <li>Clean Content History</li>
+                        <li>Full Account Access</li>
+                        <li>AdSense Connected</li>
+                        <li>Premium Support (Email + Chat)</li>
+                        <li>Premium Niche Selection</li>
+                        <li><strong>Instant AdSense Change</strong></li>
+                        <li>Priority Support (24/7)</li>
+                        <li>Channel Growth Guide</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/5kA9Ej4ygaN5f60dQU" class="button pricing-button" target="_blank">Monetize Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="section" style="background-color: var(--bg-secondary); padding: var(--spacing-xxl) 0;">
+        <div class="container">
+            <h2 class="text-center">Detailed Comparison</h2>
+            <p class="text-center">See exactly what you get with each package</p>
+            
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Basic ($389)</th>
+                            <th>Premium ($449)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subscribers</td>
+                            <td>1,000+</td>
+                            <td>1,500+</td>
+                        </tr>
+                        <tr>
+                            <td>Watch Hours</td>
+                            <td>4,000+</td>
+                            <td>6,000+</td>
+                        </tr>
+                        <tr>
+                            <td>Monetization Status</td>
+                            <td>Enabled</td>
+                            <td>Enabled</td>
+                        </tr>
+                        <tr>
+                            <td>AdSense Change</td>
+                            <td>Standard (30 days)</td>
+                            <td><strong>Instant</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Niche Selection</td>
+                            <td>Limited</td>
+                            <td>Premium Niches</td>
+                        </tr>
+                        <tr>
+                            <td>Support Level</td>
+                            <td>Basic (Email)</td>
+                            <td>Priority (Email + Chat)</td>
+                        </tr>
+                        <tr>
+                            <td>Channel Growth Guide</td>
+                            <td><i class="fas fa-times" style="color: var(--text-secondary);"></i></td>
+                            <td><i class="fas fa-check" style="color: var(--accent-success);"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Transfer Time</td>
+                            <td>24-48 hours</td>
+                            <td>12-24 hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aged Channels Section (Subtle) -->
+    <section class="aged-channels">
+        <div class="container">
+            <h2 class="text-center" style="font-size: var(--font-size-xxl);">Looking for a Starting Point?</h2>
+            <p class="text-center">We also offer aged YouTube channels perfect for creators on a budget or those looking to experiment with content.</p>
+            
+            <div class="aged-channel-card">
+                <div class="aged-channel-header">
+                    <h3>Aged Channel Starter</h3>
+                    <div class="aged-channel-price">$20</div>
+                </div>
+                <p class="aged-channel-description">A budget-friendly option to start your YouTube journey with an established channel history.</p>
+                <ul class="aged-channel-features">
+                    <li>Non-monetized</li>
+                    <li>Aged 1+ year</li>
+                    <li>Clean history</li>
+                    <li>Full access</li>
+                    <li>Basic support</li>
+                </ul>
+                <div class="limited-stock">
+                    <i class="fas fa-exclamation-circle"></i> Limited Stock Available
+                </div>
+                <a href="https://buy.stripe.com/4gwaIn6Go5sL9LG6or" class="button aged-channel-button" target="_blank">Monetize Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <p class="text-center">Join hundreds of satisfied creators who have accelerated their YouTube journey</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I was struggling to meet YouTube's monetization requirements for months. With YTonic, I was able to skip that process entirely and start earning from my very first upload!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="overflow: hidden; padding: 0;">
+                            <img src="images/alex_m.png" alt="Alex M." style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Alex M.</h4>
+                            <p>Tech Reviewer</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-play"></i> 250K+ Views</span>
+                                <span><i class="fas fa-dollar-sign"></i> $1,800 in 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The premium package with instant AdSense change was worth every penny. I was able to connect my payment details immediately and start receiving revenue without any waiting period."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="overflow: hidden; padding: 0;">
+                            <img src="images/sarah_k.png" alt="Sarah K." style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah K.</h4>
+                            <p>Lifestyle Creator</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 45K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $3,200 in 90 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-testimonials text-center" style="margin-top: var(--spacing-xl);">
+                <a href="testimonials.html" class="text-link">See All Reviews <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <p class="text-center">Find answers to common questions about our pre-monetized YouTube channels</p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">How do I know the channels are legitimate?</div>
+                    <div class="faq-answer">
+                        <p>All our channels undergo a rigorous verification process to ensure they comply with YouTube's policies. We check monetization status, content history, and account standing before listing any channel. We also provide a secure escrow system for all transactions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between Basic and Premium packages?</div>
+                    <div class="faq-answer">
+                        <p>The Basic package ($389) includes channels that meet the minimum monetization requirements with 1,000+ subscribers and 4,000+ watch hours. The Premium package ($449) offers channels with 1,500+ subscribers, 6,000+ watch hours, instant AdSense change capability, and priority support for a more advanced starting point.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What does "Instant AdSense Change" mean?</div>
+                    <div class="faq-answer">
+                        <p>With our Premium package, you can immediately change the AdSense payment details to your own account, allowing you to start receiving revenue directly without any waiting period. The Basic package requires the standard YouTube waiting period (approximately 30 days) before you can change payment details.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What are Aged Channels and why are they so affordable?</div>
+                    <div class="faq-answer">
+                        <p>Aged Channels are YouTube accounts that have been created at least 1 year ago but haven't yet reached monetization requirements. They're perfect for creators on a budget who want to skip the initial account setup and age requirements. They're priced at $20 because they require additional work to reach monetization status, but they give you a head start compared to creating a brand new channel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Earning on YouTube?</h2>
+            <p>Limited pre-monetized channels available. Secure yours today and skip months of building from scratch.</p>
+            <div class="cta-timer">
+                <i class="fas fa-clock"></i> Special pricing available for a limited time
+            </div>
+            <a href="https://buy.stripe.com/5kA9Ej4ygaN5f60dQU" class="button cta-button" target="_blank">Monetize Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo"><span>YT</span>onic</div>
+                    <p>YTonic provides pre-monetized YouTube channels for creators who want to skip the waiting period and start earning immediately.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest channel availability and YouTube tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                        <button type="submit" class="button newsletter-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 YTonic. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuToggle && navLinks) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // If the clicked item wasn't active, make it active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Simulate Recent Purchase Notifications
+        function showRecentPurchase() {
+            const names = ['John', 'Sarah', 'Michael', 'Emma', 'David', 'Olivia', 'James', 'Sophia'];
+            const locations = ['New York', 'London', 'Toronto', 'Sydney', 'Berlin', 'Paris', 'Tokyo', 'Singapore'];
+            const packages = ['Premium', 'Basic', 'Premium', 'Basic', 'Premium', 'Aged Channel'];
+            
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+            const randomPackage = packages[Math.floor(Math.random() * packages.length)];
+            
+            const notification = document.createElement('div');
+            notification.className = 'purchase-notification';
+            notification.innerHTML = `
+                <strong>${randomName} from ${randomLocation}</strong>
+                <p>just purchased a ${randomPackage} package</p>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after animation completes
+            setTimeout(() => {
+                notification.remove();
+            }, 5500);
+        }
+        
+        // Show a notification every 30-60 seconds
+        function scheduleNotifications() {
+            const delay = Math.floor(Math.random() * (60000 - 30000) + 30000);
+            
+            setTimeout(() => {
+                showRecentPurchase();
+                scheduleNotifications();
+            }, delay);
+        }
+        
+        // Start notifications after 15 seconds on the page
+        setTimeout(scheduleNotifications, 15000);
+        
+        // Countdown Timer
+        const timerElement = document.querySelector('.cta-timer');
+        
+        if (timerElement) {
+            function updateTimer() {
+                const now = new Date();
+                const hours = 23 - now.getHours();
+                const minutes = 59 - now.getMinutes();
+                const seconds = 59 - now.getSeconds();
+                
+                timerElement.innerHTML = `<i class="fas fa-clock"></i> Special pricing ends in ${hours}h ${minutes}m ${seconds}s`;
+            }
+            
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+    });
+    </script>
+    <script src="sticky-buy-button.js"></script>
+    <script src="scroll-animations.js"></script>
+</body>
+</html>

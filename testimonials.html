@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - YTonic</title>
+    <meta name="description" content="Read what our customers say about YTonic's pre-monetized YouTube channels. Real reviews from real creators who have accelerated their YouTube journey.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="spacing-fix.css">
+    <link rel="stylesheet" href="sticky-buy-button.css">
+    <link rel="stylesheet" href="scroll-animations.css">
+    <style>
+        /* Testimonials Page Specific Styles */
+        .testimonials-page {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .overall-rating {
+            text-align: center;
+            margin-bottom: var(--spacing-xxl);
+            padding: var(--spacing-xl);
+            background-color: var(--bg-elevated);
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .rating-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .stars {
+            font-size: var(--font-size-xl);
+            color: var(--accent-warning);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .rating-text {
+            color: var(--text-secondary);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .testimonial-card {
+            background-color: var(--bg-elevated);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            transition: transform var(--transition-normal);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-rating {
+            margin-bottom: var(--spacing-md);
+            color: var(--accent-warning);
+        }
+        
+        .testimonial-date {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .submit-review {
+            max-width: 800px;
+            margin: var(--spacing-xxl) auto;
+            background-color: var(--bg-elevated);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+        }
+        
+        .review-form {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        
+        .form-label {
+            font-weight: 600;
+        }
+        
+        .form-input, .form-textarea {
+            padding: var(--spacing-md);
+            background-color: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .rating-select {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+        
+        .rating-option {
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity var(--transition-normal);
+        }
+        
+        .rating-option:hover, .rating-option.selected {
+            opacity: 1;
+        }
+        
+        .submit-button {
+            justify-self: start;
+            margin-top: var(--spacing-md);
+        }
+        
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><span>YT</span>onic</a>
+            <nav class="nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <a href="https://buy.stripe.com/5kA9Ej4ygaN5f60dQU" class="button" target="_blank">Monetize Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Testimonials Page Content -->
+    <section class="testimonials-page">
+        <div class="container">
+            <h1 class="text-center">Customer Testimonials</h1>
+            <p class="text-center">See what creators are saying about their experience with YTonic</p>
+            
+            <!-- Overall Rating -->
+            <div class="overall-rating">
+                <div class="rating-number">9.8</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="rating-text">Based on 127 verified reviews</p>
+            </div>
+            
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">April 18, 2025</div>
+                    <div class="testimonial-content">
+                        <div style="margin-bottom: 15px;">
+                            <img src="images/analytics/youtube_stats.png" alt="YouTube Analytics" style="width: 100%; max-width: 600px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        </div>
+                        <p>"I bought a channel from here and omg.. first month did 2.4k with shorts. W site"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #1abc9c; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">JD</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Jake D.</h4>
+                            <p>Shorts Creator</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-play"></i> 25.9M+ Views</span>
+                                <span><i class="fas fa-dollar-sign"></i> $2,437 in 30 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">March 15, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"I was struggling to meet YouTube's monetization requirements for months. With YTonic, I was able to skip that process entirely and start earning from my very first upload! The channel was exactly as described and the transfer process was smooth."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #3498db; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">AM</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Alex M.</h4>
+                            <p>Tech Reviewer</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-play"></i> 250K+ Views</span>
+                                <span><i class="fas fa-dollar-sign"></i> $1,800 in 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">February 28, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"The premium package with instant AdSense change was worth every penny. I was able to connect my payment details immediately and start receiving revenue without any waiting period. Customer support was responsive and helped me through the entire process."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #e84393; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">SK</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah K.</h4>
+                            <p>Lifestyle Creator</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 45K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $3,200 in 90 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">April 2, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"As a new creator, I was intimidated by YouTube's monetization requirements. YTonic made it possible for me to focus on creating content rather than chasing numbers. The channel I purchased had a clean history and great engagement metrics."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #0984e3; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">MJ</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Marcus J.</h4>
+                            <p>Gaming Creator</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 12K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $950 in 45 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-date">March 10, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"I purchased the Basic package and was impressed with the quality of the channel. The transfer process took a bit longer than expected, but the support team was helpful throughout. Would recommend to anyone looking to bypass the monetization waiting period."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #fd79a8; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">JL</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Jennifer L.</h4>
+                            <p>DIY & Crafts</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-play"></i> 85K+ Views</span>
+                                <span><i class="fas fa-dollar-sign"></i> $1,200 in 75 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-date">January 25, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"After trying to grow my channel organically for over a year, I decided to try YTonic. The Premium package was a game-changer for me. The channel had more subscribers than advertised, though I had to update some branding elements to match my niche."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #00b894; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">DR</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>David R.</h4>
+                            <p>Finance Educator</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 22K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $2,500 in 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">April 10, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"After researching several options, I chose YTonic for their transparent process and excellent customer service. The Premium package exceeded my expectations - the channel was exactly as described and the monetization was active from day one. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #6c5ce7; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">RT</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Robert T.</h4>
+                            <p>Tech Reviewer</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 28K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $2,400 in 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 7 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">March 22, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"I was skeptical at first, but YTonic delivered exactly what they promised. The channel was monetized and ready to go from day one. I've been able to focus on creating quality content instead of worrying about meeting monetization thresholds."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #e84393; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">ET</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Emily T.</h4>
+                            <p>Travel Vlogger</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-play"></i> 180K+ Views</span>
+                                <span><i class="fas fa-dollar-sign"></i> $2,100 in 90 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gen Z Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">April 15, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"YTonic saved me so much time. Was stuck at 800 subs for months. Got their Premium package and now I'm actually making money from my content instead of just grinding for nothing."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #8e44ad; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">ZK</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Zoe K.</h4>
+                            <p>Lifestyle & Fashion</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 32K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $2,800 in 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gen Z Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-date">March 28, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"Almost gave up on YouTube before finding YTonic. Their Basic package was exactly what I needed. Started uploading gaming content and my channel actually took off. Best decision I've made for my channel."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #2ecc71; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">TJ</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Tyler J.</h4>
+                            <p>Gaming & Reactions</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-users"></i> 18K+ Subscribers</span>
+                                <span><i class="fas fa-dollar-sign"></i> $1,500 in 45 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gen Z Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-date">April 5, 2025</div>
+                    <div class="testimonial-content">
+                        <p>"Was worried about the transfer process but YTonic made it super easy. My TikTok-style content is doing really well on the new channel. Definitely worth the investment if you're serious about creating content."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="width: 60px; height: 60px; overflow: hidden; padding: 0; background-color: #f39c12; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <div style="font-size: 24px; color: white; font-weight: bold;">AS</div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Ava S.</h4>
+                            <p>Short-Form Creator</p>
+                            <div class="testimonial-stats">
+                                <span><i class="fas fa-play"></i> 420K+ Views</span>
+                                <span><i class="fas fa-dollar-sign"></i> $3,100 in 90 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Submit Review Form -->
+            <div class="submit-review">
+                <h2>Share Your Experience</h2>
+                <p>We value your feedback! Please share your experience with YTonic to help other creators.</p>
+                
+                <form class="review-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Your Rating</label>
+                        <div class="rating-select">
+                            <div class="rating-option" data-rating="1">
+                                <i class="fas fa-star fa-2x"></i>
+                            </div>
+                            <div class="rating-option" data-rating="2">
+                                <i class="fas fa-star fa-2x"></i>
+                            </div>
+                            <div class="rating-option" data-rating="3">
+                                <i class="fas fa-star fa-2x"></i>
+                            </div>
+                            <div class="rating-option" data-rating="4">
+                                <i class="fas fa-star fa-2x"></i>
+                            </div>
+                            <div class="rating-option selected" data-rating="5">
+                                <i class="fas fa-star fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="channel-type" class="form-label">Package Purchased</label>
+                        <select id="channel-type" class="form-input" required>
+                            <option value="">Select Package</option>
+                            <option value="basic">Basic Package</option>
+                            <option value="premium">Premium Package</option>
+                            <option value="aged">Aged Channel</option>
+                            <option value="custom">Custom Solution</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review" class="form-label">Your Review</label>
+                        <textarea id="review" class="form-textarea" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="button submit-button">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo"><span>YT</span>onic</div>
+                    <p>YTonic provides pre-monetized YouTube channels for creators who want to skip the waiting period and start earning immediately.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest channel availability and YouTube tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                        <button type="submit" class="button newsletter-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 YTonic. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Rating Selection
+            const ratingOptions = document.querySelectorAll('.rating-option');
+            
+            ratingOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    ratingOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Form Submission (Prevent default for demo)
+            const reviewForm = document.querySelector('.review-form');
+            
+            if (reviewForm) {
+                reviewForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Show submission confirmation
+                    alert('Thank you for your review! It will be published after moderation.');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Reset rating selection
+                    ratingOptions.forEach(opt => opt.classList.remove('selected'));
+                    ratingOptions[4].classList.add('selected'); // Default to 5 stars
+                });
+            }
+        });
+    </script>
+    <script src="sticky-buy-button.js"></script>
+    <script src="scroll-animations.js"></script>
+</body>
+</html>
